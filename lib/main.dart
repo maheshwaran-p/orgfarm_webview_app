@@ -125,11 +125,15 @@ class _WebViewExampleState extends State<WebViewExample> {
   late final WebViewController _controller;
   bool _isLoading = true;
 
+  Future<void> _refreshWebView() async {
+    await _controller.reload();
+  }
+
   @override
   void initState() {
     super.initState();
 
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ));
 
@@ -215,7 +219,7 @@ Page resource error:
           );
         },
       )
-      ..loadRequest(Uri.parse('https://orgfarm.store/'));
+      ..loadRequest(Uri.parse('https://51eaa2-2.myshopify.com/'));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {
@@ -231,16 +235,19 @@ Page resource error:
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.green,
-      // appBar: AppBar(
-      //   title: const Text('Flutter WebView example'),
-      //   // This drop down menu demonstrates that Flutter widgets can be shown over the web view.
-      //   // actions: <Widget>[
-      //   //   NavigationControls(webViewController: _controller),
-      //   //   SampleMenu(webViewController: _controller),
-      //   // ],
-      // ),
-      body: Stack(
+        // backgroundColor: Colors.green,
+        // appBar: AppBar(
+        //   title: const Text('Flutter WebView example'),
+        //   // This drop down menu demonstrates that Flutter widgets can be shown over the web view.
+        //   // actions: <Widget>[
+        //   //   NavigationControls(webViewController: _controller),
+        //   //   SampleMenu(webViewController: _controller),
+        //   // ],
+        // ),
+        body: RefreshIndicator(
+      onRefresh: _refreshWebView,
+
+      child: Stack(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 38.0),
@@ -260,7 +267,7 @@ Page resource error:
         ],
       ),
       // floatingActionButton: favoriteButton(),
-    );
+    ));
   }
 
   Widget favoriteButton() {
