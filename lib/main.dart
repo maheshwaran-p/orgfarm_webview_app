@@ -219,7 +219,8 @@ Page resource error:
           );
         },
       )
-      ..loadRequest(Uri.parse('https://51eaa2-2.myshopify.com/'));
+      ..loadRequest(Uri.parse(
+          'https://orgfarm.store/?_ab=0&_fd=0&_sc=1&preview_theme_id=167747191075'));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {
