@@ -106,6 +106,7 @@ class _WebViewExampleState extends State<WebViewExample> {
     final localVersion = int.parse(info.version.replaceAll('.', ''));
   
     final remoteVersion = Platform.isAndroid? int.parse(remoteConfig.newAndriodAppVersion.replaceAll('.', '')):int.parse(remoteConfig.newIosAppVersion.replaceAll('.', ''));
+   
     debugPrint('localVersion::::$localVersion');
     debugPrint('remoteVersion:::::$remoteVersion' );
 
@@ -121,7 +122,9 @@ class _WebViewExampleState extends State<WebViewExample> {
   Widget build(BuildContext context) {
     final loadingState = Provider.of<LoadingState>(context);
 
-    return Scaffold(
+    return
+     SafeArea(child: 
+     Scaffold(
       body: Stack(
         children: [
           _WebViewWidget(loadingState: loadingState),
@@ -131,7 +134,7 @@ class _WebViewExampleState extends State<WebViewExample> {
             ),
         ],
       ),
-    );
+     ) );
   }
 }
 
