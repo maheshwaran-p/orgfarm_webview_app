@@ -46,14 +46,14 @@ void showUpdateAlert(BuildContext context) {
               Utils.openLink(url: 'https://play.google.com/store/apps/details?id=com.orgfarm.customer');
                 FirebaseAnalytics.instance.logEvent(
                   name: 'update_popup_shown_in_android',
-                  parameters: {'status': 'success'},
+                  parameters: {'status':'success'},
                 );
 
               }else{
                 Utils.openLink(url: 'https://apps.apple.com/us/app/orgfarm/id1515008376?platform=iphone');
                 FirebaseAnalytics.instance.logEvent(
                   name: 'update_popup_shown_in_ios',
-                  parameters: {'status': 'success'},
+                  parameters: {'status':'success'},
                 );
               }   
               },
@@ -92,6 +92,8 @@ class WebViewExample extends StatefulWidget {
 }
 
 class _WebViewExampleState extends State<WebViewExample> {
+  final _webViewController = WebViewController();
+
   @override
   void initState() {
     super.initState();
@@ -122,34 +124,65 @@ class _WebViewExampleState extends State<WebViewExample> {
   Widget build(BuildContext context) {
     final loadingState = Provider.of<LoadingState>(context);
 
-    return
-     SafeArea(child: 
-     Scaffold(
-      body: Stack(
-        children: [
-          _WebViewWidget(loadingState: loadingState),
-          if (loadingState.isLoading)
-            const Center(
-              child: CupertinoActivityIndicator(radius: 10), // Cupertino loading indicator
-            ),
+    return WillPopScope(
+      onWillPop: _onWillPop,
+      child: SafeArea(
+        child: Scaffold(
+          body: Stack(
+            children: [
+              _WebViewWidget(loadingState: loadingState, controller: _webViewController),
+              if (loadingState.isLoading)
+                const Center(
+                  child: CupertinoActivityIndicator(radius: 10), // Cupertino loading indicator
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+Future<bool> _onWillPop() async {
+  if (await _webViewController.canGoBack()) {
+    _webViewController.goBack();
+    return false;
+  } else {
+    return await showDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        title: Text('Exit App'),
+        content: Text('Are you sure you want to exit the app?'),
+        actions: [
+          CupertinoDialogAction(
+            child: Text('No'),
+            onPressed: () {
+              Navigator.of(context).pop(false);
+            },
+          ),
+          CupertinoDialogAction(
+            child: Text('Yes'),
+            onPressed: () {
+              Navigator.of(context).pop(true);
+            },
+          ),
         ],
       ),
-     ) );
+    );
   }
+}
 }
 
 class _WebViewWidget extends StatefulWidget {
   final LoadingState loadingState;
+  final WebViewController controller;
 
-  const _WebViewWidget({Key? key, required this.loadingState}) : super(key: key);
+  const _WebViewWidget({Key? key, required this.loadingState, required this.controller}) : super(key: key);
 
   @override
   State<_WebViewWidget> createState() => __WebViewWidgetState();
 }
 
 class __WebViewWidgetState extends State<_WebViewWidget> {
-  late final WebViewController _controller;
-
   @override
   void initState() {
     super.initState();
@@ -158,22 +191,10 @@ class __WebViewWidgetState extends State<_WebViewWidget> {
       statusBarColor: Colors.transparent,
     ));
 
-    late final PlatformWebViewControllerCreationParams params;
-    if (WebViewPlatform.instance is WebKitWebViewPlatform) {
-      params = WebKitWebViewControllerCreationParams(
-        allowsInlineMediaPlayback: true,
-        mediaTypesRequiringUserAction: const <PlaybackMediaTypes>{},
-      );
-    } else {
-      params = const PlatformWebViewControllerCreationParams();
-    }
-
-    final WebViewController controller = WebViewController.fromPlatformCreationParams(params);
-
-    controller
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
-      ..setNavigationDelegate(
+    widget.controller
+     ..setJavaScriptMode(JavaScriptMode.unrestricted)
+     ..setBackgroundColor(const Color(0x00000000))
+     ..setNavigationDelegate(
         NavigationDelegate(
           onPageStarted: (String url) {
             debugPrint('Page started loading: $url');
@@ -193,14 +214,12 @@ class __WebViewWidgetState extends State<_WebViewWidget> {
           },
         ),
       )
-      ..setUserAgent('orgfarm-mobile-app') // Set the custom user-agent
-      ..loadRequest(Uri.parse('https://orgfarm.store'));
-
-    _controller = controller;
+     ..setUserAgent('orgfarm-mobile-app') // Set the custom user-agent
+     ..loadRequest(Uri.parse('https://orgfarm.store'));
   }
 
   @override
   Widget build(BuildContext context) {
-    return WebViewWidget(controller: _controller);
+    return WebViewWidget(controller: widget.controller);
   }
 }
