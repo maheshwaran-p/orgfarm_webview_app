@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -69,6 +70,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
  // (Platform.isAndroid)?
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  final status = await AppTrackingTransparency.requestTrackingAuthorization();
+
   //:await Firebase.initializeApp();
 
   await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(Constants.isRelease);
