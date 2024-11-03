@@ -103,7 +103,9 @@ class _WebViewExampleState extends State<WebViewExample> {
   @override
   void initState() {
     super.initState();
+    if(Platform.isIOS){
         WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((_) => initPlugin());
+    }
     _checkForUpdates(); 
   }
 
