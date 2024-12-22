@@ -1,0 +1,301 @@
+{
+  "project_info": {
+    "project_number": "776370519623",
+    "firebase_url": "https://orgfarmv3.firebaseio.com",
+    "project_id": "orgfarmv3",
+    "storage_bucket": "orgfarmv3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776370519623:android:e7eb08f7f5d17195d57b62",
+        "android_client_info": {
+          "package_name": "com.android.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd0z0Q_BiJhaJdJLKcVJrGzWDdLfoYkmQ"
+        },
+        {
+          "current_key": "AIzaSyC3yIN0g0lVBZdrjZ4sM3dyoozk0xn0ZAI"
+        },
+        {
+          "current_key": "AIzaSyBCzl-3qarrA42nnOdEPpNG6pnKrGiVu9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776370519623-mmrnn5f6d839qe47pe973e7nh2cd8udn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orgfarm.customer",
+                "app_store_id": "162463587"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776370519623:android:e6e2fb16aed63776d57b62",
+        "android_client_info": {
+          "package_name": "com.orgfarm.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776370519623-euiikdo7tp5qqgoir6982m6gig6edbub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orgfarm.customer",
+            "certificate_hash": "990eb99279f7021af7d988f79a82a531c689c26b"
+          }
+        },
+        {
+          "client_id": "776370519623-prcag1uhf3dgc2bka3spjk62fi3ktotm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orgfarm.customer",
+            "certificate_hash": "68bec0d80d1db4175b6194b8b3b479af4c2ab6ac"
+          }
+        },
+        {
+          "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd0z0Q_BiJhaJdJLKcVJrGzWDdLfoYkmQ"
+        },
+        {
+          "current_key": "AIzaSyC3yIN0g0lVBZdrjZ4sM3dyoozk0xn0ZAI"
+        },
+        {
+          "current_key": "AIzaSyBCzl-3qarrA42nnOdEPpNG6pnKrGiVu9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776370519623-mmrnn5f6d839qe47pe973e7nh2cd8udn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orgfarm.customer",
+                "app_store_id": "162463587"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776370519623:android:fcf55a0adb28a5fdd57b62",
+        "android_client_info": {
+          "package_name": "com.orgfarm.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776370519623-tg90s7kaf1g1iktqqjsqbee2lvdcp61k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orgfarm.driver",
+            "certificate_hash": "169551346e708dd48368563afe0ac272327bfbf8"
+          }
+        },
+        {
+          "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd0z0Q_BiJhaJdJLKcVJrGzWDdLfoYkmQ"
+        },
+        {
+          "current_key": "AIzaSyC3yIN0g0lVBZdrjZ4sM3dyoozk0xn0ZAI"
+        },
+        {
+          "current_key": "AIzaSyBCzl-3qarrA42nnOdEPpNG6pnKrGiVu9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776370519623-mmrnn5f6d839qe47pe973e7nh2cd8udn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orgfarm.customer",
+                "app_store_id": "162463587"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776370519623:android:6bf4cad681aac57dd57b62",
+        "android_client_info": {
+          "package_name": "com.orgfarm.packing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd0z0Q_BiJhaJdJLKcVJrGzWDdLfoYkmQ"
+        },
+        {
+          "current_key": "AIzaSyC3yIN0g0lVBZdrjZ4sM3dyoozk0xn0ZAI"
+        },
+        {
+          "current_key": "AIzaSyBCzl-3qarrA42nnOdEPpNG6pnKrGiVu9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776370519623-mmrnn5f6d839qe47pe973e7nh2cd8udn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orgfarm.customer",
+                "app_store_id": "162463587"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776370519623:android:ee7ddfd6db1c4acdd57b62",
+        "android_client_info": {
+          "package_name": "com.orgfarm.store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776370519623-n6u6pmnkkvk9fhnl1t310jpq4euclcif.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orgfarm.store",
+            "certificate_hash": "169551346e708dd48368563afe0ac272327bfbf8"
+          }
+        },
+        {
+          "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd0z0Q_BiJhaJdJLKcVJrGzWDdLfoYkmQ"
+        },
+        {
+          "current_key": "AIzaSyC3yIN0g0lVBZdrjZ4sM3dyoozk0xn0ZAI"
+        },
+        {
+          "current_key": "AIzaSyBCzl-3qarrA42nnOdEPpNG6pnKrGiVu9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776370519623-mmrnn5f6d839qe47pe973e7nh2cd8udn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orgfarm.customer",
+                "app_store_id": "162463587"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776370519623:android:3eeb81e96ce8039bd57b62",
+        "android_client_info": {
+          "package_name": "store.orgfarm.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd0z0Q_BiJhaJdJLKcVJrGzWDdLfoYkmQ"
+        },
+        {
+          "current_key": "AIzaSyC3yIN0g0lVBZdrjZ4sM3dyoozk0xn0ZAI"
+        },
+        {
+          "current_key": "AIzaSyBCzl-3qarrA42nnOdEPpNG6pnKrGiVu9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776370519623-8isp36ulfqlp4fd3gma3ms0ipoi20s65.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776370519623-mmrnn5f6d839qe47pe973e7nh2cd8udn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orgfarm.customer",
+                "app_store_id": "162463587"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

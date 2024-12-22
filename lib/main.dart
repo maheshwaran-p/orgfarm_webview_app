@@ -9,6 +9,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:orgfarm/fcm_service.dart';
 import 'package:orgfarm/firebase_options.dart';
 import 'package:orgfarm/services/constant.dart';
 import 'package:orgfarm/services/remote_config_service.dart';
@@ -67,15 +68,12 @@ void showUpdateAlert(BuildContext context) {
 }
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
- // (Platform.isAndroid)?
+WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-
-
-  //:await Firebase.initializeApp();
-
   await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(Constants.isRelease);
+  
+  // Initialize FCM Service
+  await FCMService.initialize();
 
   runApp(
     ChangeNotifierProvider(
