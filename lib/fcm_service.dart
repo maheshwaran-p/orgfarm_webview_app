@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -13,6 +15,10 @@ class FCMService {
   static Future<void> initialize() async {
     // Initialize SharedPreferences
     _prefs = await SharedPreferences.getInstance();
+    if (Platform.isIOS) {
+    await _firebaseMessaging.getAPNSToken();
+  }
+
 
     // Initialize local notifications
     await _initializeLocalNotifications();
